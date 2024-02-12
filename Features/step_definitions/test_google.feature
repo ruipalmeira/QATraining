@@ -4,13 +4,11 @@ Feature: Google search
   So, I can learn new things.
 
   Background: Google site is up and reachable
-    Given User opens a new browser
-    When User go to https://google.com
+    Given User open a new browser
+    When User go to "https://google.com"
     Then User must see the Google homepage
 
   Scenario: Google search for text
     Given User search for text "BDD"
     When Page loads
-    Then User must see "BDD related results"
-
-  Scenario Outline: 
+    Then User must see "BDD" related results

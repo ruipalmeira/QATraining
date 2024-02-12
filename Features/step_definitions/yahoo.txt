@@ -9,7 +9,7 @@ When('User go to {string}') do |address|
 end
 
 Then('User must see the google home page') do
-  expect(page).to have_selector(:xpath, "//img[@alt='Google']")
+  expect(page).to have_selector(:xpath, "//img[@alt='Yahoo']")
 end
 
 Given('User search for {string}') do |query|
