@@ -5,7 +5,7 @@ Feature: Yahoo search
 
   Background: Yahoo site is up and reachable
     Given User opens a new browser
-    When User go to https://Yahoo.com
+    When User go to https://yahoo.com
     Then User must see the Yahoo homepage
 
   Scenario: Yahoo search for text
