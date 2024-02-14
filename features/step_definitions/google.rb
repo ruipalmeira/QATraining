@@ -5,17 +5,19 @@ end
 
 When('User go to {string}') do |address|
   visit address
-  # falta adicionar método para aceitar cookies.
   sleep 1
 end
 
 Then('User must accept cookies') do
-  #expect(page).to have_content(:xpath, "/html/body/div[2]/div[3]/div[3]/span/div/div/div/div[3]/div/button[2]")
+  # expect(page).to have_content(:xpath, "/html/body/div[2]/div[3]/div[3]/span/div/div/div/div[3]/div/button[2]") - xpath
+  # code below is used to accept cookies when google is browsed in automated mode (same as incognito)
   click_button("Aceitar tudo")
   sleep 2
 end
 
 Then('User must see the Google homepage') do
+  # chamar atenção do formador para imagens comemorativas - exemplo dia dos namorados :D -
+  # melhor verificar outro elemento que esteja sempre presente
   expect(page).to have_selector(:xpath, "//img[@alt='Google']")
 end
 
