@@ -5,14 +5,21 @@ end
 
 When('User go to {string}') do |address|
   visit address
+  # falta adicionar método para aceitar cookies.
   sleep 1
 end
 
-Then('User must see the google home page') do
+Then('User must accept cookies') do
+  #expect(page).to have_content(:xpath, "/html/body/div[2]/div[3]/div[3]/span/div/div/div/div[3]/div/button[2]")
+  click_button("Aceitar tudo")
+  sleep 2
+end
+
+Then('User must see the Google homepage') do
   expect(page).to have_selector(:xpath, "//img[@alt='Google']")
 end
 
-Given('User search for {string}') do |query|
+Given('User search for text {string}') do |query|
   page.find(:xpath, "//textarea[@name='q']").set(query)
   sleep 3
   page.find(:xpath, "//textarea[@name='q']").native.send_keys(:return)

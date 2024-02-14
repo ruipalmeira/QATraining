@@ -6,6 +6,7 @@ Feature: Google search
   Background: Google site is up and reachable
     Given User open a new browser
     When User go to "https://google.com"
+    Then User must accept cookies
     Then User must see the Google homepage
 
   Scenario: Google search for text
