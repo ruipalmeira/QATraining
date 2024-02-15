@@ -16,9 +16,7 @@ Then('User must accept cookies') do
 end
 
 Then('User must see the Google homepage') do
-  # chamar atenção do formador para imagens comemorativas - exemplo dia dos namorados :D -
-  # melhor verificar outro elemento que esteja sempre presente
-  expect(page).to have_selector(:xpath, "//img[@alt='Google']")
+  expect(page).to have_selector(:xpath, "//textarea[@name='q']")
 end
 
 Given('User search for text {string}') do |query|
