@@ -2,6 +2,7 @@ require 'capybara/cucumber'
 require 'selenium/webdriver'
 require 'rspec'
 require 'rspec/expectations'
+require 'site_prism'
 
 include RSpec::Matchers
 
